@@ -2,7 +2,7 @@
     font-size: x-large;
 }
 
-link.hover{
+.link .hover{
     transition: all 30ms ease-in-out;
     font-size: 16px;
 }
