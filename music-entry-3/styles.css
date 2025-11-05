@@ -1,0 +1,208 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+  font-family: koulen; /* set name */
+  src: url(fonts/BBHSansBogle-Regular.ttf); /* url of the font */
+  font-weight:inherit;
+}
+@font-face {
+  font-family: Questrial; /* set name */
+  src: url(fonts/Questrial-Regular.ttf); /* url of the font */
+  font-weight:inherit;
+}
+@font-face {
+  font-family: Dm Mono; /* set name */
+  src: url(fonts/DMMono-Regular.ttf); /* url of the font */
+  font-weight:inherit;
+}
+
+@font-face {
+  font-family: Dm Mono Italic; /* set name */
+  src: url(fonts/DMMono-Italic.ttf); /* url of the font */
+  font-weight:inherit;
+}
+
+.parent{
+display: flexbox;
+position: fixed;
+margin-left: 50px;
+padding: 8px;
+color: white;
+margin-top: 30px;
+}
+
+.child1{
+    font-family: Questrial;
+    font-size: 150px;
+    letter-spacing: -0.04em;
+}
+
+.child2{
+    font-family: Dm Mono;
+    font-size: 50px;
+    letter-spacing: -.08em;
+    line-height: 40px;
+    text-align: left;
+    word-spacing: -10px;
+}
+
+.child3{
+    font-family: Dm Mono italic;
+    font-size: 30px;
+    letter-spacing: -.08em;
+    line-height: 28px;
+    text-align: left;
+    word-spacing: -5px;
+    max-width: 15ch;
+}
+
+.imageparent{
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  height: 500px;
+  align-items: left;
+  justify-content: flex-end;
+  margin-right: 100px;
+  background-color: black;
+
+
+}
+.imageparent2{
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  height: 500px;
+  align-items: left;
+  justify-content: flex-end;
+  margin-top: -50px;
+  margin-right: 100px;
+  background-color: black;
+}
+
+.imageparent3{
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  height: 500px;
+  align-items: left;
+  justify-content: flex-end;
+  margin-top: -50px;
+  margin-right: 100px;
+  background-color: black;
+}
+
+.imageparent4{
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  height: 500px;
+  align-items: left;
+  justify-content: flex-end;
+  margin-top: -50px;
+  margin-right: 100px;
+  background-color: black;
+}
+
+.imageparent5{
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  height: 500px;
+  align-items: left;
+  justify-content: flex-end;
+  margin-top: -50px;
+  margin-right: 100px;
+  background-color: black;
+}
+
+.imageparent6{
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  height: 500px;
+  align-items: left;
+  justify-content: flex-end;
+  margin-top: -50px;
+  margin-right: 100px;
+  background-color: black;
+}
+
+.baby{
+   width: 400px; 
+}
+
+.baby1{
+    position: relative;
+    text-align: center;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  width:400px;
+}
+
+.baby {
+  width: 400px;
+  display: block;
+  transition: opacity 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: 2;
+}
+
+
+#titletext1{
+    font-family: Questrial;
+    font-weight: 400;
+    font-size: 35px;
+    letter-spacing: -.02em;
+    line-height: 32px;
+    font-style: normal;
+    color: white;
+}
+
+.text1 {
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: left;
+  font-family: Dm Mono Italic;
+  font-size: 20px;
+  line-height: 1em;
+  opacity: 0;
+    transition:
+    opacity 1.2s cubic-bezier(0.65, 0, 0.35, 1),
+    transform 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: 1;
+  width: 400px;
+  letter-spacing: -.01em;
+  font-style: italic;
+}
+
+
+.image-container:hover .baby {
+  opacity: 0;
+}
+
+.image-container:hover .text1 {
+  opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}

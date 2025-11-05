@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+   
+}
+
+.flex1 {
+    width: 900px;
+    display: flex;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.type{
+    display: flex;
+    flex-grow: 1;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.image-of-movie{
+    width: 300px;
+    height: auto;
+    display: flex;
+    padding: 10px;
+}
+
+.vertical-line{
+    width: 2px;
+    background-color: black;
+    height: 340px;
+}
