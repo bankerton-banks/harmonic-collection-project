@@ -4,24 +4,76 @@
     box-sizing: border-box;
 }
 
-body{
+@font-face {
+  font-family:'Staatilches'; 
+  src: url('fonts/Staatliches-Regular.ttf');
+}
+
+@font-face {
+  font-family:'DMSans'; 
+  src: url('fonts/DMSans-VariableFont_opsz\,wght.ttf');
+}
+
+@font-face {
+  font-family:'DMSans-italic'; 
+  src: url('fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf');
+}
+
+.body{
+    margin-top: 50px;
    
 }
 
+.header{
+    font-family: staatilches;
+    font-size: 150pt;
+    letter-spacing: -5pt;
+    margin-left: 25px;
+    position: fixed;
+    color: white;
+    margin-top: -50px;
+}
+
+
 .flex1 {
+    width: 900px;
+    display: flex;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+    border-right: 5px solid white;
+    border-bottom: 2.5px solid white;
+    justify-content: right;
+    align-items: center;
+    margin-left: 575px;
+    
+}
+.flex2 {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-top: 2.5px solid  white;
+    border-left: 5px solid  white;
+    border-right: 5px solid  white;
+    border-bottom: 2.5px solid  white;
+    margin-left: 575px;
+}
+
+.flex3 {
     width: 900px;
     display: flex;
     border: 2px solid black;
     justify-content: center;
     align-items: center;
     margin: auto;
+    border-top: 2.5px solid  white;
+    border-left: 5px solid  white;
+    border-right: 5px solid  white;
+    border-bottom: 5px solid  white;
+    margin-left: 575px;
 }
 
-.type{
-    display: flex;
-    flex-grow: 1;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
 .image-of-movie{
     width: 300px;
     height: auto;
@@ -31,6 +83,40 @@ body{
 
 .vertical-line{
     width: 2px;
-    background-color: black;
-    height: 340px;
+    background-color:  white;
+    height:max-content;
+    height: auto;
+    position: relative;
 }
+
+.type{
+    padding: 10px;
+    margin-left: 10px;
+    color: white;
+}
+.title{
+    font-family: Staatilches;
+    font-size: 50pt;
+    letter-spacing: -1pt; 
+    line-height: 40pt;
+}
+
+.title{
+    font-family: Staatilches;
+    font-size: 50pt;
+    letter-spacing: -1pt; 
+    line-height: 40pt;
+}
+
+.specs{
+    font-family: DMsans;
+    font-size: 30pt;
+    line-height: 30pt;
+}
+
+.description{
+    font-family: DMsans;
+    font-size: 20pt;
+    line-height: 20pt;
+}
+
