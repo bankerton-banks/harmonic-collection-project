@@ -5,6 +5,23 @@
 }
 
 @font-face {
+  font-family: 'Geist';
+  src: url('fonts/Geist-Regular.woff2') format('woff2'),;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist-light';
+      src: url('fonts/Geist-Light.woff2') format('woff');
+  font-style: normal;
+}
+
+@font-face{
+   font-family: 'Geist-mono';
+   src: url(fonts/GeistMono-Regular.woff2) format('woff2');
+}
+
+@font-face {
   font-family: koulen; /* set name */
   src: url(fonts/BBHSansBogle-Regular.ttf); /* url of the font */
   font-weight:inherit;
@@ -32,29 +49,28 @@ position: fixed;
 margin-left: 50px;
 padding: 8px;
 color: white;
-margin-top: 30px;
+margin-top: -20px;
 }
 
 .child1{
-    font-family: Questrial;
+    font-family: Geist;
     font-size: 150px;
     letter-spacing: -0.04em;
 }
 
 .child2{
-    font-family: Dm Mono;
+    font-family: Geist;
     font-size: 50px;
-    letter-spacing: -.08em;
+    letter-spacing: -.05em;
     line-height: 40px;
     text-align: left;
-    word-spacing: -10px;
 }
 
 .child3{
-    font-family: Dm Mono italic;
+    font-family: Geist-mono;
     font-size: 30px;
     letter-spacing: -.08em;
-    line-height: 28px;
+    line-height: 30px;
     text-align: left;
     word-spacing: -5px;
     max-width: 15ch;
@@ -168,7 +184,7 @@ margin-top: 30px;
 
 
 #titletext1{
-    font-family: Questrial;
+    font-family: geist;
     font-weight: 400;
     font-size: 35px;
     letter-spacing: -.02em;
@@ -184,7 +200,7 @@ margin-top: 30px;
   transform: translate(-50%, -50%);
   color: white;
   text-align: left;
-  font-family: Dm Mono Italic;
+  font-family: geist-mono;
   font-size: 20px;
   line-height: 1em;
   opacity: 0;
@@ -194,7 +210,6 @@ margin-top: 30px;
   z-index: 1;
   width: 400px;
   letter-spacing: -.01em;
-  font-style: italic;
 }
 
 

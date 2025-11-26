@@ -4,27 +4,40 @@
     box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Geist';
+  src: url('fonts/Geist-Regular.woff2') format('woff2'),
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Geist-light';
+      src: url('fonts/Geist-Light.woff2') format('woff');
+  font-style: normal;
+}
+
 .sitetitle{
     display: flex;
     height: 300px;
     margin-left: 50px;
     margin-right: 50px;
+    align-items: flex-start;
+    vertical-align: baseline;
 }
-
 
 
 .heading
 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:Geist;
     font-size: 50pt;
     text-align: left;
     letter-spacing: -3pt;
       color: midnightblue;
+    margin-bottom: 90px;
 }
 
 
 .sub1 {
-  font-family: Arial, Helvetica, sans-serif;  
+  font-family: Geist;
   font-size: 20pt;
   text-align: left;
   line-height: 25pt;
@@ -32,10 +45,11 @@
   margin-left: 60px;
   margin-top: 50px;
   color: midnightblue;
+  margin-bottom: 90px;
 }
 
 .sub2 {
-  font-family: Arial, Helvetica, sans-serif;  
+  font-family: Geist;  
   font-size: 18pt;
   line-height: 22pt;
   letter-spacing: -0.5pt;
@@ -43,6 +57,7 @@
   margin-top: 50px;
   color: midnightblue;
   margin-right: -50px;
+  margin-bottom: 90px;
 }
 
 .images{
@@ -52,6 +67,7 @@
     align-items: center;
     align-self: center;
     justify-content: center;
+    margin-top: 100px;
     
 }
 .image-container{
@@ -103,27 +119,31 @@
 
 .descript{
  display: flex;
-    gap: 48px; 
+    gap: 20px; 
     flex-direction: row;
     align-items: center;
     align-self: center;
-    margin-left: 50px;
-    margin-right: 50px;
-    justify-content: center;
+    margin-left: 40px;
+    margin-right: 60px;
+    justify-content: space-between;
+    margin-top: 50px;
+    vertical-align: baseline;
+    align-items:flex-start;
 }
 
 .description{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: geist-light ;
     font-size: 12pt;
     letter-spacing: -0.5pt;
-    line-height: 12pt;
+    line-height: 13pt;
     max-width: 250px;
     color: midnightblue;
     border-radius: 10%;
+    text-align: left;
 }
 
 #title{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Geist;
     font-size:12pt;
     font-weight: 600;
     letter-spacing: -0.5pt;

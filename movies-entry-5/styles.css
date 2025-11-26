@@ -5,19 +5,20 @@
 }
 
 @font-face {
-  font-family:'Staatilches'; 
-  src: url('fonts/Staatliches-Regular.ttf');
+  font-family:'Geist'; 
+  src: url('fonts/Geist-Regular.woff2');
 }
 
 @font-face {
-  font-family:'DMSans'; 
-  src: url('fonts/DMSans-VariableFont_opsz\,wght.ttf');
+  font-family:'Gesit-light'; 
+  src: url('fonts/Geist-Light.woff2');
 }
 
 @font-face {
-  font-family:'DMSans-italic'; 
-  src: url('fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf');
+  font-family:'Geist-mono'; 
+  src: url('fonts/GeistMono-Regular.woff2');
 }
+
 
 .body{
     margin-top: 50px;
@@ -25,9 +26,9 @@
 }
 
 .header{
-    font-family: staatilches;
-    font-size: 150pt;
-    letter-spacing: -5pt;
+    font-family: Geist;
+    font-size: 120pt;
+    letter-spacing: -8pt;
     margin-left: 25px;
     position: fixed;
     color: white;
@@ -95,27 +96,27 @@
     color: white;
 }
 .title{
-    font-family: Staatilches;
+    font-family: Geist;
     font-size: 50pt;
     letter-spacing: -1pt; 
     line-height: 40pt;
 }
 
 .title{
-    font-family: Staatilches;
+    font-family: Geist;
     font-size: 50pt;
     letter-spacing: -1pt; 
     line-height: 40pt;
 }
 
 .specs{
-    font-family: DMsans;
+    font-family: Geist-light;
     font-size: 30pt;
     line-height: 30pt;
 }
 
 .description{
-    font-family: DMsans;
+    font-family: geist-mono;
     font-size: 20pt;
     line-height: 20pt;
 }
