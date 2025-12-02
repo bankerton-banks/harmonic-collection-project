@@ -238,7 +238,8 @@
     left: 20px; 
     position: absolute;
     opacity: 0;
-    transition: opacity .5s ease-in-out, transform 1s ease-in-out;
+    animation-duration: 3s;
+    transition: opacity 5s ease-in-out, transform 1s ease-in-out;
 }
 
 .box#offshoot2 {
@@ -248,7 +249,8 @@
     right: 0px; 
     position: absolute;
     opacity: 0;
-    transition: opacity .5s ease-in-out, transform 1s ease-in-out;
+    animation-duration: 3s;
+    transition: opacity 5s ease-in-out, transform 1s ease-in-out;
 }
 
 
