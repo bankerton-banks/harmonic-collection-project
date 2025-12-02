@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000000;
+}
+.title{
+    font-family: Geist;
+    font-size: 80pt;
+    letter-spacing: -3pt;
+    margin-left: 25px;
+    position: fixed;
+    color: white;
+    margin-top: -20px;
+    font-weight: 600;
+}
+.header{
+    margin-top: 100px;
+}
+
+.flex-box{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.image img{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}

@@ -28,11 +28,12 @@
 .header{
     font-family: Geist;
     font-size: 120pt;
-    letter-spacing: -8pt;
+    letter-spacing: -5pt;
     margin-left: 25px;
     position: fixed;
     color: white;
     margin-top: -50px;
+    font-weight: 600;
 }
 
 
@@ -104,20 +105,21 @@
 
 .title{
     font-family: Geist;
-    font-size: 50pt;
+    font-size: 45pt;
     letter-spacing: -1pt; 
     line-height: 40pt;
+    font-weight: 400;
 }
 
 .specs{
     font-family: Geist-light;
-    font-size: 30pt;
-    line-height: 30pt;
+    font-size: 25pt;
+    line-height: 28pt;
 }
 
 .description{
-    font-family: geist-mono;
-    font-size: 20pt;
-    line-height: 20pt;
+    font-family: geist-light;
+    font-size: 18pt;
+    line-height: 19pt;
 }
 

@@ -1,0 +1,293 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('fonts/Geist-Regular.woff2') format('woff2'),;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Geist-light';
+  src: url('fonts/Geist-Light.woff2') format('woff');
+  font-style: normal;
+}
+body {
+    background-color: #FEF9EF;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttoncontainer {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    margin-top: 0px;
+    cursor: pointer;
+    height: 75px;
+    width: 240px;
+    background-color: #002561;
+    text-decoration: none;
+    margin-right: 40px;
+}
+
+.button:hover{
+    background-color: #001537;
+    transition: background-color 0.3s ease;
+}
+
+.button-text {
+    margin: 0;
+    padding: 0;
+    font-family: Geist-light;
+    font-size: 24pt;
+    letter-spacing: -1pt;
+    color: #FEF9EF;
+}
+
+.button.about-button {
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    top: 85px;
+    right: 0;
+    width: 300px;
+    height: fit-content;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid #002561;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+}
+
+.button.about-button:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tooltip p {
+    margin: 0;
+    line-height: 1;
+    color: #002561;
+    font-family: Geist-light;
+    font-size: 18pt;
+}
+
+h1{
+    font-family:Geist;
+    font-size: 96pt;
+    text-align: left;
+    letter-spacing: -3pt;
+      color: #002561;
+      margin-left: 20px;
+}
+
+.Movies{
+    font-family:Geist;
+    font-size: 40pt;
+    text-align: left;
+    letter-spacing: -3pt;
+      color: #002561;
+      padding-left: 120px;
+}
+
+.Books{
+    font-family:Geist;
+    font-size: 40pt;
+    text-align: left;
+    letter-spacing: -3pt;
+      color: #FEF9EF;
+    padding-left: 300px;
+}
+
+.Music{
+    font-family:Geist;
+    font-size: 40pt;
+    text-align: left;
+    letter-spacing: -3pt;
+      color: #002561;
+    padding-left: 440px;
+}
+
+.Random{
+    font-family:Geist;
+    font-size: 40pt;
+    text-align: left;
+    letter-spacing: -3pt;
+      color: #002561;
+    padding-left: 600px;
+}
+
+.Memes{
+    font-family:Geist;
+    font-size: 40pt;
+    text-align: left;
+    letter-spacing: -3pt;
+      color: #FEF9EF;
+    padding-left: 820px;
+}
+
+.People{
+    font-family:Geist;
+    font-size: 40pt;
+    text-align: left;
+    letter-spacing: -3pt;
+      color: #002561;
+    padding-left: 1050px;
+}
+
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.blocks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 144px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.slideshow {
+    position: absolute;
+    width: 105%;
+    align-items: center;
+    inset: 0;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.slideshow img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: none; /* No animation by default */
+}
+
+/* Only animate when hovering */
+.blocks:hover .slideshow img {
+    animation: fade 2.5s infinite;
+}
+
+/* Delay each image so they play one after another */
+.blocks:hover .slideshow img:nth-child(1) { animation-delay: 0s; }
+.blocks:hover .slideshow img:nth-child(2) { animation-delay: 0.5s; }
+.blocks:hover .slideshow img:nth-child(3) { animation-delay: 1s; }
+.blocks:hover .slideshow img:nth-child(4) { animation-delay: 1.5s; }
+
+@keyframes fade {
+    0% { opacity: 1; }
+    18% { opacity: 1; }
+    20% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Show slideshow when hovering block */
+.blocks:hover .slideshow {
+    opacity: 1;
+}
+
+/* Hide text on hover */
+.blocks:hover h2 {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.blocks:hover {
+    height: 200px;
+}
+
+#one {
+    background-color: #FFCB77;
+}
+
+#two {
+    background-color: #383B53;
+    color: #FEF9EF;
+}
+
+#three {
+    background-color: #3E92CC;
+}
+
+#four {
+    background-color: #FE6D73;
+}
+
+#five {
+    background-color: #002561;
+    color: #FEF9EF;
+}
+
+#six {
+    background-color: #7FC29B;
+}
+.option {
+    font-family: Geist;
+    font-size: 40pt;
+    position: absolute;
+    margin-right: 50px;
+    right: 30px;
+    color: #002561;
+    padding-left: 20px;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 50 px;
+    transition: visibility 0.3s, opacity 0.3s ease;
+    text-decoration: none;
+    line-height: 35pt;
+} 
+
+.option a {
+    display: inline-block;
+    color: #002561;
+      border: #002561 solid 3px;
+    border-radius: 10px; 
+    width: fit-content;
+    padding: 10px;
+    margin-left: 40px;
+    align-items: center;
+    /* Make links respect spacing */
+}
+
+#six:hover .option {
+    visibility: visible;
+    color: #002561;
+    opacity: 1;
+}
+
+
