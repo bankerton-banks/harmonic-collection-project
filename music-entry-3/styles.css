@@ -28,24 +28,24 @@ body{
 }
 
 @font-face {
-  font-family: koulen; /* set name */
-  src: url(fonts/BBHSansBogle-Regular.ttf); /* url of the font */
+  font-family: koulen; 
+  src: url(fonts/BBHSansBogle-Regular.ttf); 
   font-weight:inherit;
 }
 @font-face {
-  font-family: Questrial; /* set name */
-  src: url(fonts/Questrial-Regular.ttf); /* url of the font */
+  font-family: Questrial; 
+  src: url(fonts/Questrial-Regular.ttf); 
   font-weight:inherit;
 }
 @font-face {
-  font-family: Dm Mono; /* set name */
-  src: url(fonts/DMMono-Regular.ttf); /* url of the font */
+  font-family: Dm Mono; 
+  src: url(fonts/DMMono-Regular.ttf); 
   font-weight:inherit;
 }
 
 @font-face {
-  font-family: Dm Mono Italic; /* set name */
-  src: url(fonts/DMMono-Italic.ttf); /* url of the font */
+  font-family: Dm Mono Italic; 
+  src: url(fonts/DMMono-Italic.ttf); 
   font-weight:inherit;
 }
 

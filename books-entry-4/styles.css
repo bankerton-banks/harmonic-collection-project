@@ -211,7 +211,6 @@ body {
         margin-right: 10px;
     }
     
-    /* Keep images in a column */
     .images {
         flex-direction: column;
         margin-top: 40px;
@@ -223,7 +222,7 @@ body {
         width: 100%;
     }
     
-    /* Keep descriptions in a column */
+  
     .descript {
         flex-direction: column;
         margin-left: 10px;
@@ -232,7 +231,7 @@ body {
         align-items: stretch;
     }
     
-    /* Create a wrapper for each image + description pair */
+    
     .book-pair {
         display: flex;
         flex-direction: column;
