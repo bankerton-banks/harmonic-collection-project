@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background-color: black;
+    background-color: #7494EA;
     overflow-x: hidden;
 }
 
@@ -19,6 +19,12 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Geist-thin';
+      src: url('fonts/Geist-Thin.woff2') format('woff');
+  font-style: normal;
+}
+
 .sitetitle{
     display: flex;
     height: 300px;
@@ -29,22 +35,24 @@ body {
 }
 
 
-.heading
-{
-    font-family:Geist;
-    font-size: 75pt;
+h1{
+  font-family: "campaign-serif", sans-serif;
+font-weight: 300;
+font-style: italic;
+    font-size: 150pt;
+    letter-spacing: 3.5px;
     text-align: left;
-    letter-spacing: -3pt;
-      color:  white;
+    letter-spacing: -6pt;
+      color:  #00183f;
     margin-bottom: 90px;
-    margin-top: -30px;
+    margin-top: -10px;
 }
 
 .header-line {
     width: 1425px;
     border: none;
-    border-top: 5px solid #FEF9EF;
-    margin-top: -20px;
+    border-top: 3px solid #00183f;
+    margin-top: -30px;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -52,28 +60,28 @@ body {
 
 
 .sub1 {
-  font-family: Geist;
+  font-family: Geist-thin;
   font-size: 30pt;
   text-align: left;
   line-height: 40pt;
   letter-spacing: -1pt;
-  margin-left: 80px;
+  margin-left: 100px;
   margin-top: 20px;
-  color:  #FEF9EF;
+  color:  #00183f;
   margin-bottom: 90px;
-  padding-right: 0px;
-  padding-left: 10px;
+  padding-right: 20px;
+  padding-left: 0px;
   padding-bottom: 30px;
 }
 
 .sub2 {
-  font-family: Geist;  
+  font-family: Geist-thin;  
   font-size: 20pt;
   line-height: 25pt;
-  letter-spacing: -0.5pt;
+
   text-align: left;
   margin-top: 20px;
-  color:  #FEF9EF;
+  color:  #00183f;
   margin-right: 20px;
   margin-bottom: 90px;
   padding-bottom: 30px;
@@ -97,7 +105,7 @@ body {
     align-items: center;
     align-self: center;
     justify-content: center;
-    margin-top: -20px;
+    margin-top: -55px;
     z-index: 2;
     position: relative;
     opacity: 1;
@@ -146,35 +154,51 @@ body {
     margin-left: 40px;
     margin-right: 60px;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 30px;
     vertical-align: baseline;
     align-items:flex-start;
 }
 
 .description{
-    font-family: geist-light ;
+    font-family: geist-thin ;
     font-size: 12pt;
-    letter-spacing: -0.5pt;
+
     line-height: 13pt;
     max-width: 250px;
-    color: #FEF9EF;
+    color: #00183f;
     border-radius: 10%;
     text-align: left;
 }
 
 #title{
-    font-family: Geist;
-    font-size:12pt;
+    font-family: Geist-light;
+    font-size:14pt;
     font-weight: 600;
-    letter-spacing: -0.5pt;
+   
     line-height: 11pt;
     font-style: italic;
-    color:  #FEF9EF;
+    color:  #00183f;
 }
 
 
+.mobile-layout {
+    display: none;
+}
+
 
 @media (max-width: 768px) {
+
+    .images,
+    .descript {
+        display: none;
+    }
+    
+
+    .mobile-layout {
+        display: block;
+        padding: 20px;
+    }
+    
     .sitetitle {
         flex-direction: column;
         height: auto;
@@ -182,87 +206,95 @@ body {
         margin-right: 10px;
     }
     
-    .heading {
-        font-size: 40pt;
+    h1 {
+        font-size: 100pt;
         margin-bottom: 20px;
         margin-top: 10px;
+        letter-spacing: -3pt;
     }
     
     .sub1 {
         font-size: 20pt;
         line-height: 24pt;
         margin-left: 0px;
-        margin-top: 10px;
+        margin-top: 0px;
         margin-bottom: 20px;
         padding-left: 0px;
+        padding-bottom: 10px;
     }
     
     .sub2 {
         font-size: 16pt;
         line-height: 18pt;
-        margin-top: 10px;
-        margin-bottom: 20px;
+        margin-top: 0px;
+        margin-bottom: 50px;
         margin-right: 0px;
+        padding-bottom: 10px;
     }
     
     .header-line {
         width: calc(100% - 20px);
         margin-left: 10px;
         margin-right: 10px;
+        margin-bottom: 40px;
+        margin-top: 10px;
+
     }
     
-    .images {
-        flex-direction: column;
-        margin-top: 40px;
-        gap: 10px;
-    }
-    
-    .image-container {
-        margin-top: 0px;
-        width: 100%;
-    }
-    
-  
-    .descript {
-        flex-direction: column;
-        margin-left: 10px;
-        margin-right: 10px;
-        gap: 10px;
-        align-items: stretch;
-    }
-    
-    
+   
     .book-pair {
         display: flex;
-        flex-direction: column;
-        gap: 15px;
-        margin-bottom: 30px;
-    }
-    
-    .description {
-        max-width: 100%;
-        text-align: left;
-        font-size: 10pt;
-        line-height: 12pt;
-        flex: 1;
-        display: flex;
         flex-direction: row;
+        gap: 15px;
+        margin-bottom: 40px;
+        align-items: flex-start;
     }
     
-    .baby {
-        width: 120px;
+    .book-pair .image-container {
         flex-shrink: 0;
+        position: relative;
+        width: 120px;
+        margin-top: 0;
     }
     
-    .hiddenback {
-        width: 130px;
+    .book-pair .baby {
+        width: 120px;
+        height: auto;
+        transition: opacity 0.3s ease;
     }
-}
+    
+    .book-pair .hiddenback {
+        width: 120px;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        transform: none;
+    }
+    
 
-.mobile-layout {
-    display: none;
-}
-
-.desktop-layout {
-    display: block;
+    .book-pair .image-container.flipped .baby {
+        opacity: 0;
+    }
+    
+    .book-pair .image-container.flipped .hiddenback {
+        opacity: 1;
+    }
+    
+    .book-pair .description {
+        flex: 1;
+        max-width: none;
+        font-size: 11pt;
+        line-height: 13pt;
+        text-align: left;
+    }
+    
+    .book-pair #title {
+        font-size: 13pt;
+        line-height: 14pt;
+        display: block;
+        margin-bottom: 8px;
+    }
 }

@@ -5,7 +5,7 @@
   }
 
   body {
-    background-color: #002561;
+    background-color: white;
     overflow-y: hidden;
 }
   
@@ -19,12 +19,18 @@
   src: url('fonts/Geist-Light.woff2') format('woff');
   font-style: normal;
 }
+@font-face {
+  font-family: 'Geist-thin';
+  src: url('fonts/Geist-Thin.woff2') format('woff');
+  font-style: normal;
+}
+  
   
   .container{
     width: 1500px;
     height:900px;
     position:absolute;
-    margin-top: -50px;
+    margin-top: 30px;
    }
 
 .head {
@@ -47,15 +53,15 @@
     border-radius: 50px;
     cursor: pointer;
     height: 75px;
-    width: 240px;
-    background-color: #ffcb77;
+    width: 150px;
+    background-color: #00183F;
     text-decoration: none;
     margin: 20px;
     position: relative;
 }
 
 .button2:hover {
-    background-color: #e6b66b;
+    background-color: #00102a;
     transition: background-color 0.3s ease;
 }
 
@@ -66,25 +72,25 @@
     border-radius: 50px;
     cursor: pointer;
     height: 75px;
-    width: 240px;
-    background-color: #7FC29B;
+    width: 200px;
+    background-color: #00183F;
     text-decoration: none;
     margin: 20px;
     position: relative;
 }
 
 .button:hover {
-    background-color: #dc4f54;
+    background-color: #00102a;
     transition: background-color 0.3s ease;
 }
 
 .button-text {
     margin: 0;
     padding: 0;
-    font-family: Geist;
+    font-family: Geist-thin;
     font-size: 24pt;
     letter-spacing: -1pt;
-    color: #002561;
+    color: white;
     pointer-events: none;
 }
 
@@ -100,7 +106,7 @@
     height: fit-content;
     padding: 20px;
     background-color: white;
-    border: 2px solid #fe6d73;
+    border: 2px solid #00183F;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     opacity: 0;
@@ -117,11 +123,27 @@
 .tooltip p {
     margin: 0;
     line-height: 1;
-    color: #4d8263;
+    color: #00183F;
     font-family: Geist-light;
     font-size: 18pt;
+    text-align: center;
 }
 
+.box#books,
+.box#movies,
+.box#people,
+.box#music,
+.box#memes,
+.box#random {
+    width: 150px;
+    height: 150px;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
    
    .box{
     position: absolute;
@@ -129,36 +151,33 @@
 
 
    .box#books{
-    width: 300px;
-    height: 300px;
+      width: 20%;
 
     top: 50px;
     right: 250px;
    }
 
    .box#books:hover{
-   transform: scale(2);
+   transform: scale(1.5);
    transition: transform 1s ease-in-out;
    transition-delay: 0.1s;
    }
 
      .box#movies{
-    width: 300px;
-    height: 300px;
+       width: 20%;
 
     top: 50px;
     left: 275px;
    }
 
     .box#movies:hover{
-   transform: scale(2);
+   transform: scale(1.5);
    transition: transform 1s ease-in-out;
    transition-delay: 0.1s;
    }
 
      .box#people{
-    width: 300px;
-    height: 300px;
+    width: 20%;
 
     top: 300px;
     right: 250px;
@@ -168,16 +187,14 @@
    
 
      .box#music{
-    width: 320px;
-    height: 320px;
+    width: 20%;
 
     top: 385px;
     left:  590px;
    }
 
         .box#memes{
-    width: 275px;
-    height: 275px;
+    width: 20%;
 
     top: 0px;
     left: 600px;
@@ -185,41 +202,53 @@
 
 
     .box#memes:hover{
-   transform: scale(2);
+   transform: scale(1.5);
    transition: transform 1s ease-in-out;
    transition-delay: 0.1s;
    }
 
     .box#music:hover{
-   transform: scale(2);
+   transform: scale(1.5);
    transition: transform 1s ease-in-out;
    transition-delay: 0.1s;
    }
 
      .box#random{
-    width: 300px;
-    height: 300px;
+    width: 20%;
 
     top: 300px;
     left: 250px;
    }
 
     .box#random:hover{
-   transform: scale(2);
+   transform: scale(1.5);
    transition: transform 1s ease-in-out;
    transition-delay: 0.1s;
    }
 
-     .box#indexes-of-me{
-    width: 700px;
-    height: 300px;
+.box#indexes-of-me{
+    width: 500px;
+    height: auto;
+    top: 200px;
+    left: 520px;
+    z-index: 0;
+}
 
-    top: 125px;
-    left: 395px;
-   }
+.box#indexes-of-me img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.box#people {
+    width: 150px;
+    height: 150px;
+    top: 300px;
+    right: 275px;
+    opacity: 1;
+    z-index: 5;
+}
 
-
-.box#people:hover  a {
+.box#people:hover img#people {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
@@ -230,31 +259,115 @@
     transform: scale(1);
 }
 
-
 .box#offshoot1 {
     width: 300px;
     height: 300px;
-    top: 100px;
-    left: 20px; 
+    top: -70px;
+    left: 0px; 
     position: absolute;
     opacity: 0;
-    animation-duration: 3s;
-    transition: opacity 5s ease-in-out, transform 1s ease-in-out;
+    transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
+    z-index: 6;
 }
 
 .box#offshoot2 {
     width: 300px;
     height: 300px;
-    top: 100px;
+    top: -20px;
     right: 0px; 
     position: absolute;
     opacity: 0;
-    animation-duration: 3s;
-    transition: opacity 5s ease-in-out, transform 1s ease-in-out;
+    transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
+    z-index: 6;
 }
-
 
 .box#people:hover {
     transform: none; 
 }
 
+
+body {
+  overflow-y: auto;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+  position: relative;    
+  width: 1500px;
+  right: 500px;
+  height: 900px;
+  margin: 30px auto 0 auto; 
+  margin-top: -80px;
+  transform: translateY(-50%);
+  overflow-y: hidden;
+}
+
+
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+  .header {
+    flex-direction: row;
+    align-items: space-between;
+    gap: 10px;
+  }
+
+  .button2,
+  .button {
+    width: 125px;
+    height: 60px;
+    align-items: left;
+    flex-direction: row;
+  }
+
+  .button-text {
+    font-size: 14pt;
+    
+  }
+  
+}
+
+@media (max-width: 800px) {
+  .container {
+    transform: scale(0.55);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    transform: scale(0.45);
+  }
+
+  .tooltip {
+    right: auto;
+    left: 30px;
+    font-size: 14pt;
+    transform: translateX(-50%);
+  }
+
+  .tooltip {
+    position: absolute;
+    top: 85px;
+    right: 0;
+    width: 200px;
+    height: fit-content;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid #00183F;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+}
+}
+
+@media (max-width: 450px) {
+  .container {
+    transform: scale(0.35);
+  }
+}

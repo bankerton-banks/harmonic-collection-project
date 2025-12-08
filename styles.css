@@ -14,8 +14,21 @@
   src: url('fonts/Geist-Light.woff2') format('woff');
   font-style: normal;
 }
+@font-face {
+  font-family: 'Geist-ExtraLight';
+  src: url('fonts/Geist-ExtraLight.woff2') format('woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist-Thin';
+  src: url('fonts/Geist-Thin.woff2') format('woff');
+  font-style: normal;
+}
+
 body {
-    background-color: #FEF9EF;
+    background-color: #ffffff;
+    overflow-x: hidden;
 }
 
 .head {
@@ -38,24 +51,24 @@ body {
     border-radius: 50px;
     margin-top: 0px;
     cursor: pointer;
-    height: 75px;
-    width: 240px;
-    background-color: #002561;
+    height: 70px;
+    width: 140px;
+    background-color: #7494EA;
     text-decoration: none;
     margin-right: 40px;
+    text-align: center;
 }
 
 .button:hover{
-    background-color: #001537;
+    background-color: #5a79cd;
     transition: background-color 0.3s ease;
 }
 
 .button-text {
     margin: 0;
     padding: 0;
-    font-family: Geist-light;
-    font-size: 24pt;
-    letter-spacing: -1pt;
+    font-family:Geist-Thin;
+    font-size: 16pt;
     color: #FEF9EF;
 }
 
@@ -71,7 +84,7 @@ body {
     height: fit-content;
     padding: 20px;
     background-color: white;
-    border: 2px solid #002561;
+    border: 2px solid #7494EA;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     opacity: 0;
@@ -88,76 +101,94 @@ body {
 .tooltip p {
     margin: 0;
     line-height: 1;
-    color: #002561;
-    font-family: Geist-light;
+    color: #7494EA;
+    font-family: Geist-ExtraLight;
     font-size: 18pt;
 }
 
-h1{
-    font-family:Geist;
+.block-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+h1 {
+    font-family: "campaign-serif", sans-serif;
+    font-weight: 300;
+    font-style: italic;
     font-size: 96pt;
     text-align: left;
     letter-spacing: -3pt;
-      color: #002561;
-      margin-left: 20px;
+    color: #00183f;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+h4{
+    font-family: campaign-serif, sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 16pt;
+    text-align: left;
+    padding-top: 35px;
+    letter-spacing: .25px;
 }
 
 .Movies{
-    font-family:Geist;
+    font-family:Geist-Thin;
     font-size: 40pt;
     text-align: left;
     letter-spacing: -3pt;
-      color: #002561;
-      padding-left: 120px;
+    color: #00183f;
+    padding-left: 120px;
 }
 
 .Books{
-    font-family:Geist;
+    font-family:Geist-Thin;
     font-size: 40pt;
     text-align: left;
     letter-spacing: -3pt;
-      color: #FEF9EF;
+    color: #00183f;
     padding-left: 300px;
 }
 
 .Music{
-    font-family:Geist;
+    font-family:Geist-Thin;
     font-size: 40pt;
     text-align: left;
     letter-spacing: -3pt;
-      color: #002561;
+    color: #00183f;
     padding-left: 440px;
 }
 
 .Random{
-    font-family:Geist;
+    font-family:Geist-Thin;
     font-size: 40pt;
     text-align: left;
     letter-spacing: -3pt;
-      color: #002561;
+    color: #00183f;
     padding-left: 600px;
 }
 
 .Memes{
-    font-family:Geist;
+    font-family:Geist-Thin;
     font-size: 40pt;
     text-align: left;
     letter-spacing: -3pt;
-      color: #FEF9EF;
+    color: #00183f;
     padding-left: 820px;
 }
 
 .People{
-    font-family:Geist;
+    font-family:Geist-Thin;
     font-size: 40pt;
     text-align: left;
     letter-spacing: -3pt;
-      color: #002561;
+    color: #00183f;
     padding-left: 1050px;
 }
-
-
-
 
 .container {
     display: flex;
@@ -196,32 +227,31 @@ h1{
     animation: none; 
 }
 
-
 .blocks:hover .slideshow img {
-    animation: fade 2.5s infinite;
+    animation: fade 1.5s infinite;
 }
 
-
 .blocks:hover .slideshow img:nth-child(1) { animation-delay: 0s; }
-.blocks:hover .slideshow img:nth-child(2) { animation-delay: 0.5s; }
+.blocks:hover .slideshow img:nth-child(2) { animation-delay: .5s; }
 .blocks:hover .slideshow img:nth-child(3) { animation-delay: 1s; }
 .blocks:hover .slideshow img:nth-child(4) { animation-delay: 1.5s; }
 
 @keyframes fade {
-    0% { opacity: 1; }
-    18% { opacity: 1; }
-    20% { opacity: 0; }
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    50% { opacity: 1; }
+    75% { opacity: 0; }
     100% { opacity: 0; }
 }
-
 
 .blocks:hover .slideshow {
     opacity: 1;
 }
 
-
-.blocks:hover h2 {
+.blocks:hover h2,
+.blocks:hover h4 {
     opacity: 0;
+    visibility: hidden;
     transition: opacity 0.3s ease;
 }
 
@@ -230,43 +260,45 @@ h1{
 }
 
 #one {
-    background-color: #FFCB77;
+    background-color: #EAC9C1;
 }
 
 #two {
-    background-color: #383B53;
-    color: #FEF9EF;
+    background-color: #85C7F2;
+    color: #00183f; 
 }
 
 #three {
-    background-color: #3E92CC;
+    background-color:  #D62246;
 }
 
 #four {
-    background-color: #FE6D73;
+    background-color: #DAFFEF;
 }
 
 #five {
-    background-color: #002561;
-    color: #FEF9EF;
+    background-color: #7494EA;
+    color: #00183f;
 }
 
 #six {
-    background-color: #7FC29B;
+    background-color: #ffdfa8;
 }
+
 .option {
-    font-family: Geist;
+    font-family: Geist-thin;
     font-size: 40pt;
     position: absolute;
     margin-right: 50px;
     right: 30px;
+    letter-spacing: -1px;
     color: #002561;
     padding-left: 20px;
     visibility: hidden;
     opacity: 0;
     display: flex;
     flex-direction: row;
-    gap: 50 px;
+    gap: 50px;
     transition: visibility 0.3s, opacity 0.3s ease;
     text-decoration: none;
     line-height: 35pt;
@@ -275,7 +307,7 @@ h1{
 .option a {
     display: inline-block;
     color: #002561;
-      border: #002561 solid 3px;
+    border: #002561 solid 2px;
     border-radius: 10px; 
     width: fit-content;
     padding: 10px;
@@ -289,4 +321,156 @@ h1{
     opacity: 1;
 }
 
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 48pt;
+        margin-left: 0;
+        margin-bottom: 10px;
+        letter-spacing: -2pt;
+    }
+    
+    .buttoncontainer {
+        gap: 10px;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .button {
+        height: 50px;
+        width: 100px;
+        margin-right: 0;
+    }
+    
+    .button-text {
+        font-size: 12pt;
+    }
+    
+    .tooltip {
+        width: fit-content;
+        font-size: 10pt;
+        right: 0;
+        left: 120px;
+        top: -10px;
+    }
+    
+    .container {
+        gap: 5px;
+    }
+    
+    .blocks {
+        height: 100px;
+        padding-left: 20px;
+    }
+    
+    .Movies, .Books, .Music, .Random, .Memes, .People {
+        font-size: 28pt;
+        padding-left: 20px;
+        letter-spacing: -2pt;
+    }
+    
+    h4 {
+        font-size: 14pt;
+        padding-top: 25px;
+    }
+    
+    .block-container {
+        gap: 20px;
+    }
+    
+    /* Enable tap interaction on mobile */
+    .blocks:active .slideshow {
+        opacity: 1;
+    }
+    
+    .blocks:active .slideshow img {
+        animation: fade 1.5s infinite;
+    }
+    
+    .blocks:active h2,
+    .blocks:active h4 {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .blocks:active {
+        height: 150px;
+    }
+    
+    /* People section mobile adjustments */
+    .option {
+        font-size: 20pt;
+        flex-direction: column;
+        gap: 15px;
+        right: 10px;
+        margin-right: 10px;
+        padding-left: 10px;
+        line-height: 24pt;
+    }
+    
+    .option a {
+        padding: 8px 15px;
+        margin-left: 0;
+        font-size: 18pt;
+    }
+    
+    #six:active .option {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+/* Extra small phones */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 36pt;
+        letter-spacing: -1.5pt;
+    }
+    
+    .button {
+        height: 45px;
+        width: 90px;
+    }
+    
+    .button-text {
+        font-size: 11pt;
+    }
+    
+    .blocks {
+        height: 80px;
+    }
+    
+    .Movies, .Books, .Music, .Random, .Memes, .People {
+        font-size: 24pt;
+        padding-left: 15px;
+    }
+    
+    h4 {
+        font-size: 12pt;
+        padding-top: 20px;
+    }
+    
+    .blocks:active {
+        height: 120px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .option {
+        font-size: 16pt;
+        line-height: 20pt;
+    }
+    
+    .option a {
+        font-size: 15pt;
+        padding: 6px 12px;
+    }
+}
 

@@ -11,25 +11,32 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/Geist-Light.woff2 ')format('woff2'),;
+  font-weight: 400;
+  font-style: normal;
+}
+
 @font-face { font-family: happy times; src: url('happy-times-NG_regular_master.otf') format('otf'),
 } 
 @font-face { font-family: happy times; font-weight:regular; src: url('happy-times-NG_regular_master.otf') format('otf'),
 }
 
 body {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Geist-thin', sans-serif;
   padding-left: 50px;
   padding-right: 50px;
   text-align: left;
   padding-top: 50px;
-  color: #7FC29B;
+  color: #ffdfa8;
 }
 
 .column:hover,
 .column1:hover,
 .column2:hover,
 .how:hover {
-    background-color: rgba(255, 255, 255, 0.3); 
+  
     padding: 20px;
     border-radius: 10px;
     transition: background-color 0.5s ease;
@@ -51,27 +58,30 @@ body {
 h1 {
     letter-spacing: -10px;
     font-size: 130pt;
-    font-family: 'Geist';
+      font-family: "campaign-serif", sans-serif;
+font-weight: 300;
+font-style: italic;
      margin-top: -50px;
      margin-bottom: 20px;
-     color: #295e40;
+     color: #00183f;
      text-align: center;
     
 }
 
 h3 { 
-  font-family: 'Geist';
+  font-family: 'Geist-thin';
   letter-spacing: -0.5px;  
+  font-style: italic;
   font-size: 25pt;
   font-weight: 500;
-  color: #224f35;
+  color: #00183f;
 }
 
 p {
     letter-spacing: -0.7px;
     font-size: 20pt;
     font-weight: 300;
-   color: #295e40;
+   color: #00183f;
     line-height: 20pt;
 }
 
@@ -113,9 +123,10 @@ line-height: 25pt;
 }
 
 .highlight {
+   font-family: "Geist";
     font-weight: 500;
     padding-right: 5px;
-  color: #427c5a;
+  color: #00183f;
 }
 
 
@@ -128,18 +139,18 @@ font: size 200pt; ;
 letter-spacing: -0.8px;
 margin-left: 75px;
 margin-top: -50px;
-color: #295e40;
+color: #00183f;
 }
 
 .dadpic {
     position: fixed;
     margin-top: 50px;
-    width: 700px;
+    width: 1500px;
     height: auto;
     opacity: 0.5;
     pointer-events: none;
     left: 50%;
-    top: 50%; 
+    top: 110%; 
     transform: translate(-50%, -50%); 
     z-index: -1; 
 }
@@ -194,7 +205,8 @@ color: #295e40;
     }
     
     .dadpic {
-        width: 90%;
+        width: 200%;
+        margin-top: 30px;
         opacity: 0.3;
     }
     

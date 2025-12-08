@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 @font-face {
   font-family:'Geist'; 
   src: url('fonts/Geist-Regular.woff2');
@@ -18,32 +19,32 @@
   font-family:'Geist-mono'; 
   src: url('fonts/GeistMono-Regular.woff2');
 }
+@font-face {
+  font-family:'Geist-thin'; 
+  src: url('fonts/Geist-Thin.otf');
+}
 
-
-.body{
-    margin-top: 50px;
+.flex{
+    margin-top: 0px;
    
 }
 
 .header{
-    font-family: Geist;
+    font-family: "campaign-serif", sans-serif;
+    font-weight: 300;
+    font-style: italic;
     font-size: 120pt;
-    letter-spacing: -5pt;
     margin-left: 25px;
+    letter-spacing: -3.5pt;
     position: fixed;
-    color: white;
-    margin-top: -50px;
-    font-weight: 600;
+    color: #00183f;
+    margin-top: 0px;
 }
 
 
 .flex1 {
     width: 900px;
     display: flex;
-    border-top: 5px solid white;
-    border-left: 5px solid white;
-    border-right: 5px solid white;
-    border-bottom: 2.5px solid white;
     justify-content: right;
     align-items: center;
     margin-left: 575px;
@@ -55,24 +56,15 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    border-top: 2.5px solid  white;
-    border-left: 5px solid  white;
-    border-right: 5px solid  white;
-    border-bottom: 2.5px solid  white;
     margin-left: 575px;
 }
 
 .flex3 {
     width: 900px;
     display: flex;
-    border: 2px solid black;
     justify-content: center;
     align-items: center;
     margin: auto;
-    border-top: 2.5px solid  white;
-    border-left: 5px solid  white;
-    border-right: 5px solid  white;
-    border-bottom: 5px solid  white;
     margin-left: 575px;
 }
 
@@ -94,17 +86,17 @@
 .type{
     padding: 10px;
     margin-left: 10px;
-    color: white;
+    color: #00183f;
 }
 .title{
-    font-family: Geist;
+    font-family: Geist-light;
     font-size: 50pt;
     letter-spacing: -1pt; 
     line-height: 40pt;
 }
 
 .title{
-    font-family: Geist;
+    font-family: Geist-light;
     font-size: 45pt;
     letter-spacing: -1pt; 
     line-height: 40pt;
@@ -112,14 +104,62 @@
 }
 
 .specs{
-    font-family: Geist-light;
+    font-family: Geist-thin;
     font-size: 25pt;
     line-height: 28pt;
 }
 
 .description{
-    font-family: geist-light;
+    font-family: geist-thin;
     font-size: 18pt;
     line-height: 19pt;
 }
 
+@media screen and (max-width: 768px) {
+    .header {
+        font-size: 100pt;
+        margin-left: 15px;
+        letter-spacing: -2pt;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    
+    .flex1, .flex2, .flex3 {
+        width: 100%;
+        flex-direction: column;
+        margin-left: 0;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .vertical-line {
+        display: none;
+    }
+    
+    .type {
+        margin-left: 0;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .title {
+        font-size: 28pt;
+        line-height: 30pt;
+    }
+    
+    .specs {
+        font-size: 16pt;
+        line-height: 18pt;
+    }
+    
+    .description {
+        font-size: 14pt;
+        line-height: 16pt;
+    }
+    
+    .image-of-movie {
+        width: 100%;
+        max-width: 300px;
+        padding: 10px 0;
+    }
+}
