@@ -273,7 +273,7 @@
 .box#offshoot2 {
     width: 300px;
     height: 300px;
-    top: -20px;
+    top: 0px;
     right: 0px; 
     position: absolute;
     opacity: 0;
