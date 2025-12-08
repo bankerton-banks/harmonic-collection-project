@@ -124,7 +124,7 @@
     margin: 0;
     line-height: 1;
     color: #00183F;
-    font-family: Geist-light;
+    font-family: Geist-thin;
     font-size: 18pt;
     text-align: center;
 }
@@ -189,8 +189,8 @@
      .box#music{
     width: 20%;
 
-    top: 385px;
-    left:  590px;
+     top: 300px;
+    left: 250px;
    }
 
         .box#memes{
@@ -215,9 +215,9 @@
 
      .box#random{
     width: 20%;
+ top: 385px;
+    left:  590px;
 
-    top: 300px;
-    left: 250px;
    }
 
     .box#random:hover{

@@ -102,7 +102,7 @@ font-size: 120pt;
   height: 500px;
   align-items: left;
   justify-content: flex-end;
-  margin-right: 100px;
+  margin-right: 50px;
   background-color: #D62246;
 }
 
@@ -205,7 +205,7 @@ font-size: 120pt;
     margin-right: 0;
     margin-left: 0;
     padding: 15px;
-    gap: 15px;
+    gap: 0px;
     justify-content: center;
     margin-top: 0;
   }
@@ -232,7 +232,7 @@ font-size: 120pt;
     line-height: 15px;
   }
   
-  /* Enable tap to reveal text on mobile */
+ 
   .image-container:active .baby {
     opacity: 0;
   }
@@ -240,41 +240,5 @@ font-size: 120pt;
   .image-container:active .text1 {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
-  }
-}
-
-/* Extra small phones */
-@media screen and (max-width: 480px) {
-  .child1 {
-    font-size: 40pt;
-  }
-  
-  .child2 {
-    font-size: 24px;
-    line-height: 26px;
-  }
-  
-  .child3 {
-    font-size: 16px;
-    line-height: 18px;
-  }
-  
-  .imageparent, .imageparent2, .imageparent3, .imageparent4, .imageparent5, .imageparent6 {
-    padding: 10px;
-    gap: 0px;
-  }
-  
-  .image-container {
-    max-width: 150px;
-  }
-  
-  .text1 {
-    font-size: 9px;
-    line-height: 10px;
-  }
-  
-  #titletext1 {
-    font-size: 12px;
-    line-height: 13px;
   }
 }
